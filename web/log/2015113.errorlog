@@ -1,0 +1,11 @@
+2015-01-13 12:47:07  SELECT * FROM problem  ORDER BY problem_id 执行错误:No database selected
+2015-01-13 12:47:12  SELECT * FROM user  ORDER BY user_id DESC 执行错误:No database selected
+2015-01-13 12:47:14  SELECT * FROM problem  ORDER BY problem_id 执行错误:No database selected
+2015-01-13 12:47:16  SELECT * FROM topic  ORDER BY topic_id 执行错误:No database selected
+2015-01-13 12:48:22  SELECT * FROM user WHERE username = 'zz' ORDER BY user_id LIMIT 1 执行错误:No database selected
+2015-01-13 12:48:27  SELECT * FROM user WHERE username = 'zz' ORDER BY user_id LIMIT 1 执行错误:No database selected
+2015-01-13 12:50:35  SELECT * FROM user WHERE username = 'root' ORDER BY user_id LIMIT 1 执行错误:No database selected
+2015-01-13 12:51:33  SELECT * FROM user WHERE username = 't' ORDER BY user_id LIMIT 1 执行错误:No database selected
+2015-01-13 12:51:50  SELECT * FROM user WHERE username = 'zz' ORDER BY user_id LIMIT 1 执行错误:No database selected
+2015-01-13 12:52:00  SELECT * FROM user WHERE username = 'cy' ORDER BY user_id LIMIT 1 执行错误:No database selected
+2015-01-13 13:52:43  SELECT * FROM user WHERE username = 'zz' ORDER BY user_id LIMIT 1 执行错误:No database selected

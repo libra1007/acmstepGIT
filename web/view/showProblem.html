@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel = 'stylesheet' tyep = 'text/css' href = '/acmstep/web/view/html/css/style.css'>
+<title>Show Problem-Beta</title>
+</head>
+<body>
+	<table class = 'problem_mod'>
+	<tr>
+		<td class = 'problem_name'><?php echo $problemInfo['problem_name'];?></td>
+	</tr>
+	<tr>
+		<td>
+		<table class = 'problem_info'>
+			<tr>
+				<td>Time Limit: <?php echo $problemInfo['time_limit'] ?></td>
+				<td>Memory Limit: <?php echo $problemInfo['memory_limit'] ?></td>
+			</tr>
+		</table>
+		<table class = 'problem_info'>
+			<tr>
+				<td>Total Submit: <?php echo $problemInfo['submit_times'] ?></td>
+				<td>Total Accepted: <?php echo $problemInfo['solve_time'] ?></td>
+				<td>Special Judge: <?php if ($problemInfo['special_judge']) echo 'YES';
+										 else echo 'NO'; ?></td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+
+	<tr>
+		<td class = 'problem_title'>Description</td>
+	</tr>
+	<tr>
+		<td class = 'problem_content'>
+		<p>
+			<?php echo $problemInfo['description']; ?>
+		</p>
+		</td>
+	</tr>
+	<tr>
+		<td class = 'problem_title'>Input</td>
+	</tr>
+	<tr>
+		<td class = 'problem_content'>
+		<p>
+			<?php echo $problemInfo['input'] ?>
+		</p>
+		</td>
+	</tr>
+	<tr>
+		<td class = 'problem_title'>Output</td>
+	</tr>
+	<tr>
+		<td class = 'problem_content'>
+		<p>
+			<?php echo $problemInfo['output'] ?>
+		</p>
+		</td>
+	</tr>
+	<tr>
+		<td class = 'problem_title'>Sample Output</td>
+	</tr>
+	<tr>
+		<td class = 'problem_content'>
+			<?php echo $problemInfo['sample_input'] ?>
+		</td>
+	</tr>
+	<tr>
+		<td class = 'problem_title'>Sample Input</td>
+	</tr>
+	<tr>
+		<td class = 'problem_content'>
+			<?php echo $problemInfo['sample_output'] ?>
+		</td>
+	</tr>
+	<?php 
+		if (isset($problemInfo['hint'])) {
+			echo "<tr><td class = 'problem_title'>Hint</td></tr>";
+			echo "<tr><td class = 'problem_content'>" . $problemInfo['hint'] . "</td></tr>";
+		}
+	?>
+	</table>
+</body>
+</html>
+

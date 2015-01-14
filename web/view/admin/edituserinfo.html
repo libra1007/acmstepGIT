@@ -1,0 +1,115 @@
+<html>
+<head>
+<title>
+	admin
+</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" 
+href="public/css/style.css" />
+</head>
+<body>
+	<div id="wrapper">
+		<?php include("header.html"); ?>
+		<div id="container">
+			<?php include("leftmenu.html"); ?>
+		</div>
+			<div id="admin_body">
+			    <table bgcolor="#66FF99" width="50%">	
+					<tr><td align="right">User Name:</td>
+						<td align="left"><?php echo $userInfo['username']; ?></td>
+				    </tr>
+
+						<form name="userinfo" action="<?php echo U('User','editUserInfo'); ?>" 
+								method="post">
+						<input type="hidden" name="user_id" value="<?php echo $userInfo['user_id']; ?>">
+						<tr>
+						   <td align="right">Nick Name:</td>
+						   <td align="left">
+							   <input type="text" name="nickname" 
+							   value="<?php echo $userInfo['nickname']; ?>" />
+						   </td>
+						</tr>
+						<tr>
+						   <td align="right">New Password:</td>
+						   <td align="left">
+							   <input type="password" name="password" 
+							   value="<?php echo $userInfo['password']; ?>" />
+						   </td>
+						</tr>
+						<tr>
+						   <td align="right">Motto:</td>
+						   <td align="left">
+							   <input type="text" name="motto" 
+							   value="<?php echo $userInfo['motto']; ?>" />
+						   </td>
+						</tr>
+						<tr>
+						   <td align="right">Email:</td>
+						   <td align="left">
+							   <input type="text" name="email" 
+							   value="<?php echo $userInfo['email']; ?>" />
+						   </td>
+						</tr>
+						<tr>
+						   <td align="right">Real Name:</td>
+						   <td align="left">
+							   <input type="text" name="realname" 
+							   value="<?php echo $userInfo['realname']; ?>" />
+						   </td>
+						</tr>
+						<tr>
+						   <td align="right">Age:</td>
+						   <td align="left">
+							   <input type="text" name="age" 
+							   value="<?php echo $userInfo['age']; ?>" />
+						   </td>
+						</tr>
+						<tr>
+						   <td align="right">School:</td>
+						   <td align="left">
+							   <input type="text" name="school" 
+							   value="<?php echo $userInfo['school']; ?>" />
+						   </td>
+						</tr>
+						<tr>
+						   <td align="right">Major:</td>
+						   <td align="left">
+							   <input type="text" name="major" 
+							   value="<?php echo $userInfo['major']; ?>" />
+						   </td>
+						</tr>
+						<tr>
+						   <td align="right">QQ:</td>
+						   <td align="left">
+							   <input type="text" name="qq" 
+							   value="<?php echo $userInfo['qq']; ?>" />
+						   </td>
+						</tr>
+					
+						<tr>
+						   <td align="right">Solved Problems:</td>
+						   <td align="left"><?php echo $userInfo['solved_times']; ?>
+						   </td>
+						</tr>
+						<tr>
+						   <td align="right">Submits:</td>
+						   <td align="left"><?php echo $userInfo['submited_times']; ?>
+						   </td>
+						</tr>
+						<tr>
+							<td align="right">
+								<input type="submit" value="更新" /> &nbsp;
+							</td>
+							<td align="left">
+								&nbsp;
+								<input type="reset" value="重置" />
+							</td>
+						</tr>
+
+						</form>
+				</table>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

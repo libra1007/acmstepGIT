@@ -1,0 +1,57 @@
+<html>
+<head>
+		<title>
+			admin
+		</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link rel="stylesheet" type="text/css" 
+		href="public/css/style.css" />
+</head>
+<body>
+	<?php
+	dump($topicinfo);
+	?>
+	<div id="wrapper">
+		<?php include("header.html"); ?>
+		<div id="container">
+		<?php include("leftmenu.html"); ?>
+		</div>
+		<div id="admin_body">
+			<table width="60%" bgcolor="#99FFFF" border=1>
+				<tr>
+					<td align=center colspan=3>
+						<?php echo $topicinfo['topic_name']; ?>
+					</td>
+				</tr>
+				<tr>
+					<td width="30%">Id</td>
+					<td>Problem Name</td>
+					<td>Op</td>
+				</tr>
+				<?php
+					foreach ($topicinfo['problemlist'] as $pid => $name){
+					$delPath = U('Topic','delTopicProblem')."&tid=".$topicinfo['topic_id']."&pid=".$pid;
+					echo "<tr><td>".$pid."</td><td>".$name."</td><td><a href=".$delPath.">Del</a></td></tr>";
+					}
+			     ?>
+				 <tr>
+				 <td align=right>
+					 添加题目(题目id):
+				 </td>
+				 <td align=left>
+					 <form name="addproblem" action="<?php echo U('Topic','addTopicProblem'); ?>" 
+						 method="POST">
+						 <input type=text name="problem_id" /> 
+						 <input type=hidden name="tid" value="<?php echo $topicinfo['topic_id']; ?>" />
+						 <td>
+							 <input type="submit" value="添加" />
+						 </td>
+					 </form>
+				 </td>
+				 </tr>
+			</table>
+		</div>
+		</div>
+	</div>
+</body>
+</html>

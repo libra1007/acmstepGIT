@@ -1,0 +1,58 @@
+<html>
+<head>
+		<title>
+			admin
+		</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link rel="stylesheet" type="text/css" 
+		href="public/css/style.css" />
+</head>
+<body>
+	<div id="wrapper">
+		<?php include("header.html"); ?>
+		<div id="container">
+		<?php include("leftmenu.html"); ?>
+		</div>
+		<div id="admin_body">
+			<form name='editproblem' action="<?php echo U('Problem','updateProblem'); ?>" method="post">
+				<table align="left" width="80%" bgcolor="#99CC99">	
+					<tr> <td>&nbsp;Title</td> </tr>
+					<tr> <td>&nbsp;<input type="text" name="problem_name" 
+							value="<?php echo $problemInfo['problem_name'];?>" /></td></tr>
+					<tr> <td>&nbsp;Problem ID</td> </tr>
+					<tr> <td>&nbsp;<input type="text" name="problem_id" 
+							value="<?php echo $problemInfo['problem_id']; ?>" /></td></tr>
+					<tr> <td>&nbsp;Time Limit(ms)</td> </tr>
+					<tr> <td>&nbsp;<input type="text" name="time_limit" 
+							value="<?php echo $problemInfo['time_limit']; ?>" /></td></tr>
+					<tr> <td>&nbsp;Memory Limit(k)</td> </tr>
+					<tr> <td>&nbsp;<input type="text" name="memory_limit" 
+							value="<?php echo $problemInfo['memory_limit']; ?>" /></td></tr>
+					<tr> <td>&nbsp;Description</td> </tr>
+					<tr><td>&nbsp;<textarea name="description" rows="5" cols="80" >
+							<?php echo $problemInfo['description']; ?> </textarea></td></tr>
+					<tr> <td>&nbsp;Input</td> </tr>
+					<tr> <td>&nbsp;<textarea name="input" rows="5" cols="80" >
+							<?php echo $problemInfo['input']; ?> </textarea></td></tr>
+					<tr> <td>&nbsp;Output</td> </tr>
+					<tr> <td>&nbsp;<textarea name="output" rows="5" cols="80" >
+						    <?php echo $problemInfo['output']; ?> </textarea></td></tr>
+					<tr> <td>&nbsp;Sample Input</td> </tr>
+					<tr> <td>&nbsp;<textarea name="sample_input" rows="5" cols="80" >
+							<?php echo $problemInfo['sample_input']; ?> </textarea></td></tr>
+					<tr> <td>&nbsp;Sample Output</td> </tr>
+					<tr> <td>&nbsp;<textarea name="sample_output" rows="5" cols="80" >
+							<?php echo $problemInfo['sample_output']; ?> </textarea></td></tr>
+					<tr> <td>&nbsp;Hint</td> </tr>
+					<tr> <td>&nbsp;<textarea name="time_limit" rows="5" cols="80" >
+						   <?php echo $problemInfo['hint']; ?> </textarea></td></tr>
+					<tr> <td align="left">
+							&nbsp;&nbsp;<input type="submit" value="更新" />&nbsp;&nbsp;
+						    <input type="reset" value="重置" />	
+				<table>
+			</form>
+		</div>
+		</div>
+	</div>
+</body>
+</html>
